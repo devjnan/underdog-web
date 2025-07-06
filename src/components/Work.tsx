@@ -15,7 +15,7 @@ const strategies = [
     title: "Digital Domination Framework",
     category: "E-Commerce Strategy",
     description: "Complete digital transformation strategy that turns online visitors into loyal customers and brand advocates.",
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     icon: <Globe className="w-6 h-6" />,
     steps: ["Website Optimization", "SEO & Content Strategy", "Paid Advertising", "Conversion Funnels", "Customer Retention"],
     focus: "Online Sales & Brand Growth"
@@ -33,7 +33,7 @@ const strategies = [
     title: "Brand Identity Blueprint",
     category: "Brand Development",
     description: "Comprehensive brand building strategy that creates memorable identities and emotional connections with customers.",
-    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
     icon: <Target className="w-6 h-6" />,
     steps: ["Brand Discovery", "Visual Identity Design", "Brand Guidelines", "Market Positioning", "Brand Launch"],
     focus: "Brand Recognition & Loyalty"
@@ -42,7 +42,7 @@ const strategies = [
     title: "Growth Acceleration System",
     category: "Performance Marketing",
     description: "Data-driven marketing system designed to scale businesses rapidly while maintaining profitability and quality.",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
     icon: <TrendingUp className="w-6 h-6" />,
     steps: ["Growth Audit", "Channel Optimization", "Automation Setup", "Performance Monitoring", "Scaling Strategy"],
     focus: "Sustainable Growth & ROI"
@@ -51,7 +51,7 @@ const strategies = [
     title: "Customer Engagement Engine",
     category: "Social Media Strategy",
     description: "Strategic social media framework that builds communities, drives engagement, and converts followers into customers.",
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
     icon: <Users className="w-6 h-6" />,
     steps: ["Audience Research", "Content Strategy", "Community Building", "Influencer Partnerships", "Social Commerce"],
     focus: "Engagement & Community Growth"
