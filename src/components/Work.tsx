@@ -1,59 +1,59 @@
 import React, { useState } from 'react';
-import { ExternalLink, Award, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Award, ChevronLeft, ChevronRight, Store, Globe, Home } from 'lucide-react';
 
 const projects = [
   {
-    title: "TechFlow Rebrand",
-    category: "Brand Strategy & Design",
-    description: "Complete brand transformation for a B2B SaaS company, resulting in 300% increase in lead generation.",
+    title: "Fashion Boutique Revival",
+    category: "Retail Store Marketing",
+    description: "Complete store transformation and local marketing campaign that increased foot traffic by 400% and sales by 350%.",
+    image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=800",
+    icon: <Store className="w-6 h-6" />,
+    metrics: ["400% Foot Traffic", "350% Sales Growth", "85% Customer Retention"],
+    year: "2024"
+  },
+  {
+    title: "E-Commerce Empire",
+    category: "Online Store Development",
+    description: "Built and launched a complete e-commerce platform that generated $2M+ in revenue within the first year.",
     image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-    awards: ["Awwwards SOTD", "CSS Design Awards"],
-    metrics: ["300% Lead Increase", "150% Brand Recognition"],
+    icon: <Globe className="w-6 h-6" />,
+    metrics: ["$2M+ Revenue", "150% Conversion Rate", "50K+ Customers"],
     year: "2024"
   },
   {
-    title: "EcoVibe Campaign",
-    category: "Digital Marketing",
-    description: "Sustainable fashion brand campaign that reached 2M+ users and drove 400% sales growth.",
-    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
-    awards: ["Cannes Lions Bronze", "D&AD Pencil"],
-    metrics: ["2M+ Reach", "400% Sales Growth"],
+    title: "Luxury Property Sales",
+    category: "Real Estate Marketing",
+    description: "Premium real estate marketing campaign that sold 95% of luxury condos within 6 months, exceeding market expectations.",
+    image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
+    icon: <Home className="w-6 h-6" />,
+    metrics: ["95% Sales Rate", "6 Month Timeline", "$50M+ Value"],
     year: "2024"
   },
   {
-    title: "FinanceForward App",
-    category: "UX/UI Design",
-    description: "Mobile-first financial app design that simplified complex investment processes for millennials.",
+    title: "Restaurant Chain Expansion",
+    category: "Multi-Location Marketing",
+    description: "Coordinated marketing strategy across 15 restaurant locations, increasing average revenue per location by 280%.",
+    image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800",
+    icon: <Store className="w-6 h-6" />,
+    metrics: ["280% Revenue Growth", "15 Locations", "92% Customer Satisfaction"],
+    year: "2023"
+  },
+  {
+    title: "Tech Startup Launch",
+    category: "Digital Brand Building",
+    description: "Complete digital marketing strategy for tech startup, achieving 1M+ app downloads and $5M Series A funding.",
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    awards: ["Red Dot Award", "UX Design Awards"],
-    metrics: ["95% User Satisfaction", "60% Task Completion"],
+    icon: <Globe className="w-6 h-6" />,
+    metrics: ["1M+ Downloads", "$5M Funding", "Top 10 App Store"],
     year: "2023"
   },
   {
-    title: "SportsTech Launch",
-    category: "Product Launch",
-    description: "Go-to-market strategy for innovative sports technology startup, achieving market leadership in 6 months.",
+    title: "Commercial Real Estate",
+    category: "Commercial Property Marketing",
+    description: "Strategic marketing for commercial real estate portfolio, achieving 100% occupancy rate in competitive market.",
     image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
-    awards: ["Marketing Excellence", "Innovation Award"],
-    metrics: ["#1 Market Position", "500K+ Users"],
-    year: "2023"
-  },
-  {
-    title: "RetailRevolution",
-    category: "E-commerce Strategy",
-    description: "Omnichannel retail transformation that increased online sales by 500% and customer retention by 200%.",
-    image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
-    awards: ["E-commerce Excellence", "Digital Innovation"],
-    metrics: ["500% Online Sales", "200% Retention"],
-    year: "2024"
-  },
-  {
-    title: "HealthTech Breakthrough",
-    category: "Healthcare Marketing",
-    description: "Revolutionary healthcare app launch that connected 1M+ patients with healthcare providers.",
-    image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800",
-    awards: ["Healthcare Innovation", "Digital Health Award"],
-    metrics: ["1M+ Users", "98% Satisfaction"],
+    icon: <Home className="w-6 h-6" />,
+    metrics: ["100% Occupancy", "Premium Tenants", "25% Above Market Rate"],
     year: "2023"
   }
 ];
@@ -62,7 +62,7 @@ const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Brand Strategy & Design', 'Digital Marketing', 'UX/UI Design', 'Product Launch', 'E-commerce Strategy', 'Healthcare Marketing'];
+  const categories = ['All', 'Retail Store Marketing', 'Online Store Development', 'Real Estate Marketing', 'Multi-Location Marketing', 'Digital Brand Building', 'Commercial Property Marketing'];
 
   const filteredProjects = filter === 'All' 
     ? projects 
@@ -81,10 +81,10 @@ const Work = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
-            FEATURED WORK
+            SUCCESS STORIES
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Case studies that showcase our ability to transform challenges into victories
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Real results from retail stores, online businesses, and real estate ventures we've transformed
           </p>
         </div>
 
@@ -120,9 +120,14 @@ const Work = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-8 left-8 right-8">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-300 uppercase tracking-wider">
-                    {filteredProjects[currentIndex]?.category}
-                  </span>
+                  <div className="flex items-center space-x-3">
+                    <div className="text-white">
+                      {filteredProjects[currentIndex]?.icon}
+                    </div>
+                    <span className="text-sm text-gray-300 uppercase tracking-wider">
+                      {filteredProjects[currentIndex]?.category}
+                    </span>
+                  </div>
                   <span className="text-sm text-gray-300">
                     {filteredProjects[currentIndex]?.year}
                   </span>
@@ -130,9 +135,19 @@ const Work = () => {
                 <h3 className="text-4xl md:text-5xl font-bold mb-4">
                   {filteredProjects[currentIndex]?.title}
                 </h3>
-                <p className="text-gray-300 text-lg max-w-2xl">
+                <p className="text-gray-300 text-lg max-w-2xl mb-6">
                   {filteredProjects[currentIndex]?.description}
                 </p>
+                <div className="flex flex-wrap gap-3">
+                  {filteredProjects[currentIndex]?.metrics.map((metric, idx) => (
+                    <span
+                      key={idx}
+                      className="px-4 py-2 bg-gray-900/70 text-white text-sm rounded-full border border-gray-600"
+                    >
+                      {metric}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -180,6 +195,11 @@ const Work = () => {
                   className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="text-white bg-black/50 p-2 rounded-full">
+                    {project.icon}
+                  </div>
+                </div>
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                   <ExternalLink className="text-white" size={20} />
                 </div>
@@ -190,10 +210,7 @@ const Work = () => {
                   <span className="text-xs text-gray-400 uppercase tracking-wider">
                     {project.category}
                   </span>
-                  <div className="flex items-center space-x-1">
-                    <Award size={12} className="text-yellow-400" />
-                    <span className="text-xs text-gray-400">{project.awards.length}</span>
-                  </div>
+                  <span className="text-xs text-gray-400">{project.year}</span>
                 </div>
 
                 <h3 className="text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">
@@ -216,8 +233,11 @@ const Work = () => {
         </div>
 
         <div className="text-center mt-16">
-          <button className="group bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-            <span className="group-hover:tracking-wider transition-all duration-300">View All Projects</span>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="group bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+          >
+            <span className="group-hover:tracking-wider transition-all duration-300">Start Your Success Story</span>
           </button>
         </div>
       </div>

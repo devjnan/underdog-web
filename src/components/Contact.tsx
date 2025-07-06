@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Store, Globe, Home } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+    businessType: '',
     message: ''
   });
 
@@ -15,7 +16,7 @@ const Contact = () => {
     console.log('Form submitted:', formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -27,10 +28,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
-            LET'S TALK
+            LET'S GROW YOUR BUSINESS
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your brand from underdog to market leader? Let's start the conversation.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Ready to transform your retail store, online business, or real estate venture? Let's discuss your marketing goals.
           </p>
         </div>
 
@@ -72,24 +73,43 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Business Types */}
+            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+              <h4 className="text-xl font-bold mb-6">We Specialize In</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Store className="w-5 h-5 text-white" />
+                  <span className="text-gray-300">Retail Stores & Physical Locations</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-5 h-5 text-white" />
+                  <span className="text-gray-300">E-commerce & Online Businesses</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Home className="w-5 h-5 text-white" />
+                  <span className="text-gray-300">Real Estate & Property Marketing</span>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
               <h4 className="text-xl font-bold mb-4">Why Choose Underdog?</h4>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                  Award-winning creative team
+                  Multi-channel marketing expertise
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                  Data-driven strategies
+                  Proven track record across industries
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                  Proven track record
+                  Data-driven strategies & results
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                  End-to-end solutions
+                  24/7 dedicated support
                 </li>
               </ul>
             </div>
@@ -134,7 +154,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company
+                  Company/Business Name
                 </label>
                 <input
                   type="text"
@@ -143,13 +163,35 @@ const Contact = () => {
                   value={formData.company}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300"
-                  placeholder="Your company"
+                  placeholder="Your business name"
                 />
               </div>
 
               <div>
+                <label htmlFor="businessType" className="block text-sm font-medium text-gray-300 mb-2">
+                  Business Type *
+                </label>
+                <select
+                  id="businessType"
+                  name="businessType"
+                  required
+                  value={formData.businessType}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors duration-300"
+                >
+                  <option value="">Select your business type</option>
+                  <option value="retail-store">Retail Store/Physical Location</option>
+                  <option value="ecommerce">E-commerce/Online Store</option>
+                  <option value="real-estate">Real Estate/Property</option>
+                  <option value="restaurant">Restaurant/Food Service</option>
+                  <option value="service-business">Service Business</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message *
+                  Tell us about your marketing goals *
                 </label>
                 <textarea
                   id="message"
@@ -159,7 +201,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300 resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Describe your business, current challenges, and what you'd like to achieve..."
                 ></textarea>
               </div>
 

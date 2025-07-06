@@ -1,42 +1,42 @@
 import React from 'react';
-import { Zap, Target, Palette, TrendingUp, Globe, Users } from 'lucide-react';
+import { Store, Globe, Home, TrendingUp, Target, Smartphone } from 'lucide-react';
 
 const services = [
   {
-    icon: <Zap className="w-8 h-8" />,
-    title: "Brand Strategy",
-    description: "We craft compelling brand narratives that resonate with your audience and differentiate you from the competition.",
-    features: ["Brand Positioning", "Market Research", "Competitive Analysis"]
-  },
-  {
-    icon: <Palette className="w-8 h-8" />,
-    title: "Creative Design",
-    description: "Award-winning creative that captures attention and drives engagement across all touchpoints.",
-    features: ["Visual Identity", "Campaign Design", "Digital Assets"]
+    icon: <Store className="w-8 h-8" />,
+    title: "Retail Store Marketing",
+    description: "Transform your physical store into a customer magnet with strategic in-store marketing, visual merchandising, and local advertising campaigns.",
+    features: ["In-Store Displays", "Local SEO", "Customer Experience Design", "Foot Traffic Analytics"]
   },
   {
     icon: <Globe className="w-8 h-8" />,
-    title: "Digital Marketing",
-    description: "Data-driven digital strategies that maximize reach, engagement, and conversion rates.",
-    features: ["Social Media", "Content Marketing", "SEO/SEM"]
+    title: "E-Commerce & Online Stores",
+    description: "Boost your online presence with conversion-optimized websites, digital advertising, and comprehensive e-commerce strategies.",
+    features: ["Website Development", "Online Advertising", "Conversion Optimization", "Social Commerce"]
+  },
+  {
+    icon: <Home className="w-8 h-8" />,
+    title: "Real Estate Marketing",
+    description: "Sell properties faster and at better prices with targeted marketing campaigns, virtual tours, and lead generation systems.",
+    features: ["Property Photography", "Virtual Tours", "Lead Generation", "Market Analysis"]
   },
   {
     icon: <Target className="w-8 h-8" />,
-    title: "Performance Marketing",
-    description: "ROI-focused campaigns that deliver measurable results and sustainable growth.",
-    features: ["Paid Advertising", "Conversion Optimization", "Analytics"]
+    title: "Brand Development",
+    description: "Build powerful brand identities that resonate with your target audience across all touchpoints and marketing channels.",
+    features: ["Logo Design", "Brand Guidelines", "Market Positioning", "Brand Strategy"]
   },
   {
     icon: <TrendingUp className="w-8 h-8" />,
-    title: "Growth Strategy",
-    description: "Comprehensive growth frameworks that scale your business and market presence.",
-    features: ["Market Expansion", "Product Launch", "Partnership Strategy"]
+    title: "Digital Advertising",
+    description: "Maximize ROI with data-driven advertising campaigns across Google, Facebook, Instagram, and other high-converting platforms.",
+    features: ["Google Ads", "Social Media Ads", "Retargeting", "Performance Analytics"]
   },
   {
-    icon: <Users className="w-8 h-8" />,
-    title: "Experience Design",
-    description: "User-centered experiences that create lasting connections between brands and customers.",
-    features: ["UX/UI Design", "Customer Journey", "Interaction Design"]
+    icon: <Smartphone className="w-8 h-8" />,
+    title: "Social Media Management",
+    description: "Engage your audience and build community with strategic social media content, influencer partnerships, and community management.",
+    features: ["Content Creation", "Community Management", "Influencer Marketing", "Social Analytics"]
   }
 ];
 
@@ -48,8 +48,8 @@ const Services = () => {
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
             OUR SERVICES
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We provide end-to-end marketing solutions that transform underdogs into industry leaders
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Comprehensive marketing solutions for retail stores, online businesses, and real estate ventures
           </p>
         </div>
 
@@ -84,6 +84,28 @@ const Services = () => {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-3xl p-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Underdog for Your Marketing?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-2xl font-bold text-white mb-2">Multi-Channel Expertise</div>
+                <p className="text-gray-300">From physical stores to online platforms and real estate markets</p>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white mb-2">Proven Results</div>
+                <p className="text-gray-300">Average 500% increase in sales and brand visibility</p>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white mb-2">Full-Service Support</div>
+                <p className="text-gray-300">End-to-end marketing solutions with dedicated account management</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

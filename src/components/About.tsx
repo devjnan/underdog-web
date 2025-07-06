@@ -1,31 +1,31 @@
 import React from 'react';
-import { Users, Award, Globe, TrendingUp } from 'lucide-react';
+import { Users, Award, Globe, TrendingUp, Store, Home } from 'lucide-react';
 
 const stats = [
-  { icon: <Users className="w-8 h-8" />, number: "50+", label: "Brands Transformed" },
-  { icon: <Award className="w-8 h-8" />, number: "25+", label: "Industry Awards" },
-  { icon: <Globe className="w-8 h-8" />, number: "15+", label: "Countries Reached" },
-  { icon: <TrendingUp className="w-8 h-8" />, number: "300%", label: "Average Growth" }
+  { icon: <Store className="w-8 h-8" />, number: "200+", label: "Retail Stores Transformed" },
+  { icon: <Globe className="w-8 h-8" />, number: "150+", label: "Online Businesses Launched" },
+  { icon: <Home className="w-8 h-8" />, number: "500+", label: "Properties Sold" },
+  { icon: <TrendingUp className="w-8 h-8" />, number: "500%", label: "Average Sales Growth" }
 ];
 
 const team = [
   {
     name: "Sarah Chen",
-    role: "Creative Director",
+    role: "Retail Marketing Director",
     image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400",
-    bio: "15+ years crafting award-winning campaigns for Fortune 500 companies"
+    bio: "15+ years transforming retail stores into customer magnets with innovative in-store marketing strategies"
   },
   {
     name: "Marcus Rodriguez",
-    role: "Strategy Lead",
+    role: "Digital Commerce Lead",
     image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=400",
-    bio: "Former McKinsey consultant specializing in brand transformation"
+    bio: "E-commerce specialist who has launched 150+ successful online stores with combined revenue of $50M+"
   },
   {
     name: "Elena Kowalski",
-    role: "Digital Director",
+    role: "Real Estate Marketing Expert",
     image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400",
-    bio: "Performance marketing expert with $50M+ in managed ad spend"
+    bio: "Real estate marketing maven with expertise in luxury properties and commercial real estate ventures"
   }
 ];
 
@@ -38,8 +38,8 @@ const About = () => {
             ABOUT UNDERDOG
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We're not just another marketing agency. We're the strategic partner that helps ambitious brands 
-            break through the noise and claim their rightful place at the top.
+            We specialize in comprehensive marketing solutions for retail stores, online businesses, and real estate ventures. 
+            From brick-and-mortar to digital storefronts, we help brands dominate their markets.
           </p>
         </div>
 
@@ -60,15 +60,35 @@ const About = () => {
           ))}
         </div>
 
+        {/* Our Expertise */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-8 text-center">
+            <Store className="w-12 h-12 text-white mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Retail Excellence</h3>
+            <p className="text-gray-300">Transform physical stores with strategic marketing, visual merchandising, and customer experience optimization.</p>
+          </div>
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-8 text-center">
+            <Globe className="w-12 h-12 text-white mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Digital Mastery</h3>
+            <p className="text-gray-300">Build powerful online presence with e-commerce platforms, digital advertising, and conversion optimization.</p>
+          </div>
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-8 text-center">
+            <Home className="w-12 h-12 text-white mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Real Estate Success</h3>
+            <p className="text-gray-300">Accelerate property sales with targeted marketing campaigns, virtual tours, and lead generation systems.</p>
+          </div>
+        </div>
+
         {/* Philosophy */}
         <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-700 rounded-3xl p-12 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-3xl md:text-4xl font-bold mb-8 text-white">
-              Our Philosophy
+              Our Mission
             </h3>
             <p className="text-xl leading-relaxed text-gray-300 mb-8">
-              "Every market leader was once an underdog. We believe that with the right strategy, 
-              fearless execution, and relentless focus, any brand can rise to dominate their space."
+              "Whether you're running a corner store, launching an e-commerce empire, or selling premium real estate, 
+              we believe every business deserves marketing that drives real results. We turn underdogs into market leaders 
+              across every industry and platform."
             </p>
             <div className="flex items-center justify-center space-x-4">
               <img 
@@ -84,7 +104,7 @@ const About = () => {
         {/* Team */}
         <div>
           <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Meet The Pack
+            Meet The Experts
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (

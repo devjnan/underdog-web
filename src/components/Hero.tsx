@@ -54,10 +54,11 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in delay-500">
-          We turn ambitious brands into market leaders through 
-          <span className="text-white font-semibold"> fearless creativity</span> and 
-          <span className="text-white font-semibold"> strategic innovation</span>
+        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in delay-500">
+          From <span className="text-white font-semibold">retail stores</span> to 
+          <span className="text-white font-semibold"> e-commerce platforms</span> and 
+          <span className="text-white font-semibold"> real estate ventures</span> - 
+          we transform brands into market leaders
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in delay-700">
@@ -79,16 +80,16 @@ const Hero = () => {
         <div className="mt-16 animate-fade-in delay-1000">
           <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
             <div className="group cursor-pointer">
-              <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
-              <div className="text-gray-400 text-sm">Brands Transformed</div>
+              <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">200+</div>
+              <div className="text-gray-400 text-sm">Brands Elevated</div>
             </div>
             <div className="group cursor-pointer">
-              <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">25+</div>
-              <div className="text-gray-400 text-sm">Industry Awards</div>
+              <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">500%</div>
+              <div className="text-gray-400 text-sm">Average Sales Growth</div>
             </div>
             <div className="group cursor-pointer">
-              <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">300%</div>
-              <div className="text-gray-400 text-sm">Average Growth</div>
+              <div className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+              <div className="text-gray-400 text-sm">Marketing Support</div>
             </div>
           </div>
         </div>
